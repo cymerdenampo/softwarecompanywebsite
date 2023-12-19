@@ -11,17 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('index', function () {
-    return view('index');
-});
+// Route::get('index', function () {
+//     return view('index');
+// });
 
-Route::get('contact', function () {
-    return view('contact');
-});
+// Route::get('contact', function () {
+//     return view('contact');
+// });
 
-// Route::get('/', 'StaticPagesController@index');
-// Route::get('/contact', 'StaticPagesController@contact');
+Route::get('/', 'StaticPagesController@index');
+Route::get('/contact', 'StaticPagesController@contact');

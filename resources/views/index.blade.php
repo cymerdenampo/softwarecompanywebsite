@@ -2,48 +2,7 @@
 
 @section('content')
     <div class="hero_area">
-        <!-- header section strats -->
-        <header class="header_section">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-                    <a class="navbar-brand" href="{{ asset('cymer/index.html') }}">
-                        <span>
-                            Esigned
-                        </span>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                            <ul class="navbar-nav  ">
-                                <li class="nav-item active">
-                                    <a class="nav-link {{ request()->is('index') ? 'active' : '' }}"
-                                        href="{{ '/' }}">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}"
-                                        href="{{ asset('contact') }}">Contact us</a>
-                                </li>
-                            </ul>
-                            <div class="user_option">
-                                <a href="">
-                                    <img src="{{ asset('cymer/images/user.png') }}" alt="">
-                                </a>
-                                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                    <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-
-        <!-- end header section -->
-        <!-- slider section -->
+        @include('layouts.header')
         <section class=" slider_section position-relative">
             <div class="container">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -58,20 +17,25 @@
                                 <div class="col">
                                     <div class="detail-box">
                                         <div>
+
+
+
                                             <h2>
                                                 welcome to
 
                                             </h2>
                                             <h1>
-                                                web agency
+                                                Software Company Website
                                             </h1>
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt ut
-                                                labore
+                                                Welcome to our software company, where innovation meets expertise. We're
+                                                dedicated to revolutionizing technology, creating bespoke solutions that
+                                                drive success. Our passion lies in empowering businesses through
+                                                cutting-edge software. Join us on this journey of innovation and
+                                                transformation.
                                             </p>
                                             <div class="">
-                                                <a href="">
+                                                <a href="contact">
                                                     Contact us
                                                 </a>
                                             </div>
@@ -90,15 +54,17 @@
 
                                             </h2>
                                             <h1>
-                                                web agency
+                                                Software Company Website
                                             </h1>
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt ut
-                                                labore
+                                                Step into a realm of limitless possibilities with our software company.
+                                                We're dedicated to pioneering innovation, delivering tailor-made solutions
+                                                that redefine industry standards. At the intersection of technology and
+                                                creativity, we're here to elevate your business to new heights. Join us in
+                                                shaping a future powered by innovation and excellence.
                                             </p>
                                             <div class="">
-                                                <a href="">
+                                                <a href="contact">
                                                     Contact us
                                                 </a>
                                             </div>
@@ -117,15 +83,16 @@
 
                                             </h2>
                                             <h1>
-                                                web agency
+                                                Software Company Website
                                             </h1>
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt ut
-                                                labore
+                                                Explore the forefront of innovation with our software company. We specialize
+                                                in crafting bespoke solutions that redefine what's possible. Our team merges
+                                                expertise with creativity to propel businesses forward. Join us as we pave
+                                                the way for a future driven by groundbreaking technology.
                                             </p>
                                             <div class="">
-                                                <a href="">
+                                                <a href="contact">
                                                     Contact us
                                                 </a>
                                             </div>
@@ -139,81 +106,7 @@
 
             </div>
         </section>
-        <!-- end slider section -->
     </div>
-
-    <!-- do section -->
-
-    <section class="do_section layout_padding">
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    What we do
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore
-                    magna
-                </p>
-            </div>
-            <div class="do_container">
-                <div class="box arrow-start arrow_bg">
-                    <div class="img-box">
-                        <img src="{{ asset('cymer/images/d-1.png') }}" alt="">
-                    </div>
-                    <div class="detail-box">
-                        <h6>
-                            Marketing
-                        </h6>
-                    </div>
-                </div>
-                <div class="box arrow-middle arrow_bg">
-                    <div class="img-box">
-                        <img src="{{ asset('cymer/images/d-2.png') }}" alt="">
-                    </div>
-                    <div class="detail-box">
-                        <h6>
-                            Development
-                        </h6>
-                    </div>
-                </div>
-                <div class="box arrow-middle arrow_bg">
-                    <div class="img-box">
-                        <img src="{{ asset('cymer/images/d-3.png') }}" alt="">
-                    </div>
-                    <div class="detail-box">
-                        <h6>
-                            Html5
-                        </h6>
-                    </div>
-                </div>
-                <div class="box arrow-end arrow_bg">
-                    <div class="img-box">
-                        <img src="{{ asset('cymer/images/d-4.png') }}" alt="">
-                    </div>
-                    <div class="detail-box">
-                        <h6>
-                            Css
-                        </h6>
-                    </div>
-                </div>
-                <div class="box ">
-                    <div class="img-box">
-                        <img src="{{ asset('cymer/images/d-5.png') }}" alt="">
-                    </div>
-                    <div class="detail-box">
-                        <h6>
-                            Wordpress
-                        </h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- end do section -->
-
-    <!-- who section -->
 
     <section class="who_section ">
         <div class="container">
@@ -227,17 +120,14 @@
                     <div class="detail-box">
                         <div class="heading_container">
                             <h2>
-                                WHO WE ARE?
+                                Services Information
                             </h2>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet,
-                            consectetur
-                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                            ad minim
-                            veniam, quis nostrud
+                            Software Company Website Service Integration Platform: A Comprehensive Resource Hub for Software
+                            Engineers
+                            and Web Developers, Offering Seamless Integration, Information Consolidation, and Streamlined
+                            Service Management with Advanced Analytics and Reporting Capabilities
                         </p>
                         <div>
                             <a href="">
@@ -250,45 +140,59 @@
         </div>
     </section>
 
-    <!-- end who section -->
-
-
-    <!-- work section -->
-    <section class="work_section layout_padding">
+    <section class="do_section layout_padding">
         <div class="container">
             <div class="heading_container">
                 <h2>
-                    CREATIVE WORKS
+                    Services Offer Information
+                </h2>
+                <h2>
+                    We Do
                 </h2>
                 <p>
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad
-                    minim veniam, quis nostrud exercitation
+                    Services Offered: Web Development, Mobile Development, Project Management.
                 </p>
             </div>
-            <div class="work_container layout_padding2">
-                <div class="box b-1">
-                    <img src="{{ asset('cymer/images/w-1.png') }}" alt="">
+            <div class="do_container">
+                <div class="box arrow-start arrow_bg">
+                    <div class="img-box">
+                        <img src="{{ asset('cymer/images/d-2.png') }}" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h6>
+                            Web <br>
+                            Development
+                        </h6>
+                    </div>
                 </div>
-                <div class="box b-2">
-                    <img src="{{ asset('cymer/images/w-2.png') }}" alt="">
+                <div class="box arrow-middle arrow_bg">
+                    <div class="img-box">
+                        <img src="{{ asset('cymer/images/mobile.png') }}" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h6>
+                            mobile <br>
+                            Development
+                        </h6>
+                    </div>
+                </div>
+                <div class="box arrow_bg">
+                    <div class="img-box">
+                        <img src="{{ asset('cymer/images/project.png') }}" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h6>
+                            Project <br>
+                            Management
+                        </h6>
+                    </div>
+                </div>
 
-                </div>
-                <div class="box b-3">
-                    <img src="{{ asset('cymer/images/w-3.png') }}" alt="">
 
-                </div>
-                <div class="box b-4">
-                    <img src="{{ asset('cymer/images/w-4.png') }}" alt="">
-
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- end work section -->
-
-    <!-- client section -->
     <section class="client_section">
         <div class="container">
             <div class="heading_container">
@@ -363,232 +267,13 @@
         </div>
     </section>
 
-    <!-- end client section -->
-
-    <!-- target section -->
-    <section class="target_section layout_padding2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="detail-box">
-                        <h2>
-                            1000+
-                        </h2>
-                        <h5>
-                            Years of Business
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="detail-box">
-                        <h2>
-                            20000+
-                        </h2>
-                        <h5>
-                            Projects Delivered
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="detail-box">
-                        <h2>
-                            10000+
-                        </h2>
-                        <h5>
-                            Satisfied Customers
-                        </h5>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="detail-box">
-                        <h2>
-                            1500+
-                        </h2>
-                        <h5>
-                            Cups of Coffee
-                        </h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- end target section -->
-
-
-    <!-- contact section -->
-
-    <section class="contact_section layout_padding">
-        <div class="container">
-
-            <div class="heading_container">
-                <h2>
-                    Request A Call Back
-                </h2>
-            </div>
-            <div class="">
-                <div class="">
-                    <div class="row">
-                        <div class="col-md-9 mx-auto">
-                            <div class="contact-form">
-                                <form action="">
-                                    <div>
-                                        <input type="text" placeholder="Full Name ">
-                                    </div>
-                                    <div>
-                                        <input type="text" placeholder="Phone Number">
-                                    </div>
-                                    <div>
-                                        <input type="email" placeholder="Email Address">
-                                    </div>
-                                    <div>
-                                        <input type="text" placeholder="Message" class="input_message">
-                                    </div>
-                                    <div class="d-flex justify-content-center">
-                                        <button type="submit" class="btn_on-hover">
-                                            Send
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="map_img-box">
-                <img src="{{ asset('cymer/images/map-img.png') }}" alt="">
-            </div>
-        </div>
-    </section>
-
-
-    <!-- end contact section -->
-
-
-    <!-- info section -->
-    <section class="info_section ">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="info_contact">
-                        <h5>
-                            About Shop
-                        </h5>
-                        <div>
-                            <div class="img-box">
-                                <img src="{{ asset('cymer/images/location-white.png') }}" width="18px" alt="">
-                            </div>
-                            <p>
-                                Address
-                            </p>
-                        </div>
-                        <div>
-                            <div class="img-box">
-                                <img src="{{ asset('cymer/images/telephone-white.png') }}" width="12px"
-                                    alt="">
-                            </div>
-                            <p>
-                                +01 1234567890
-                            </p>
-                        </div>
-                        <div>
-                            <div class="img-box">
-                                <img src="{{ asset('cymer/images/envelope-white.png') }}" width="18px" alt="">
-                            </div>
-                            <p>
-                                demo@gmail.com
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="info_info">
-                        <h5>
-                            Informations
-                        </h5>
-                        <p>
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="info_insta">
-                        <h5>
-                            Instagram
-                        </h5>
-                        <div class="insta_container">
-                            <div>
-                                <a href="">
-                                    <div class="insta-box b-1">
-                                        <img src="{{ asset('cymer/images/insta.png') }}" alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="insta-box b-2">
-                                        <img src="{{ asset('cymer/images/insta.png') }}" alt="">
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="">
-                                    <div class="insta-box b-3">
-                                        <img src="{{ asset('cymer/images/insta.png') }}" alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="insta-box b-4">
-                                        <img src="{{ asset('cymer/images/insta.png') }}" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <div class="insta-box b-3">
-                                        <img src="{{ asset('cymer/images/insta.png') }}" alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="insta-box b-4">
-                                        <img src="{{ asset('cymer/images/insta.png') }}" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="info_form ">
-                        <h5>
-                            Newsletter
-                        </h5>
-                        <form action="">
-                            <input type="email" placeholder="Enter your email">
-                            <button>
-                                Subscribe
-                            </button>
-                        </form>
-                        <div class="social_box">
-                            <a href="">
-                                <img src="{{ asset('cymer/images/fb.png') }}" alt="">
-                            </a>
-                            <a href="">
-                                <img src="{{ asset('cymer/images/twitter.png') }}" alt="">
-                            </a>
-                            <a href="">
-                                <img src="{{ asset('cymer/images/linkedin.png') }}" alt="">
-                            </a>
-                            <a href="">
-                                <img src="{{ asset('cymer/images/youtube.png') }}" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- end info_section -->
     {{-- @include('layouts.footer') --}}
 @endsection
+
+@push('css')
+    <style>
+        .logo img {
+            border-radius: 100px !important;
+        }
+    </style>
+@endpush

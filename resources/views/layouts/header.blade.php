@@ -1,9 +1,9 @@
     <header class="header_section">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-                <a class="navbar-brand" href="{{ asset('cymer/index.html') }}">
+                <a class="navbar-brand" href="/">
                     <span>
-                        Esigned
+                        <img width="100px" style="border-radius: 30px" src="{{ asset('cymer/images/software.jpg') }}" alt="software.jpg">
                     </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -23,16 +23,16 @@
                                     href="{{ asset('contact') }}">Contact us</a>
                             </li>
                         </ul>
-                        <div class="user_option">
-                            <a href="">
-                                <img src="{{ asset('cymer/images/user.png') }}" alt="">
-                            </a>
-                            <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
+
+    @push('css')
+        <style>
+            .navbar span img {
+                border-radius: 50%;
+            }
+        </style>
+    @endpush
