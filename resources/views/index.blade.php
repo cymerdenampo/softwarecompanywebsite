@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="hero_area">
+    <div class="cymer">
         @include('layouts.header')
         <section class=" slider_section position-relative">
             <div class="container">
