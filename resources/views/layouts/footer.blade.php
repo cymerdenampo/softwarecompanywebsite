@@ -23,7 +23,7 @@
 
 <section class="container-fluid footer_section">
     <p>
-        &copy; 2020 All Rights Reserved By
+        &copy; 2023 All Rights Reserved By
         <a href="https://hinulawanlab.com/" class="text-warning" target="_blank">Software Company Website</a>
     </p>
 </section>

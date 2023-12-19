@@ -13,12 +13,11 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" type="text/css" href="{{ asset('cymer/css/bootstrap.css') }}" />
-
+    <link rel="icon" type="image/x-icon" href="{{ asset('cymer/images/software.jpg')}}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
     <link href="{{ asset('cymer/css/style.css') }}" rel="stylesheet" />
     <link href="{{ asset('cymer/css/responsive.css') }}" rel="stylesheet" />
 </head>
-
 
     @yield('content')
     @include('layouts.footer')
@@ -45,7 +44,4 @@
             }
         });
     </script>
-
-
-
 </html>
